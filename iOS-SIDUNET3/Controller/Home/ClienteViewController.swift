@@ -29,9 +29,7 @@ class ClienteViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-    
-    
+
     @IBAction func guardar(_ sender: UIButton) {
         let contexto = conexion()
         let entidadCliente = NSEntityDescription.insertNewObject(forEntityName: "Clientes", into: contexto) as! Clientes
@@ -52,11 +50,9 @@ class ClienteViewController: UIViewController {
         do {
             try contexto.save()
             print("salvó")
-            
         }catch let error as NSError {
             print("Erro ao salvar", error.localizedDescription)
         }
-    
     }
     
     @IBAction func mostrar(_ sender: UIButton) {
@@ -79,7 +75,6 @@ class ClienteViewController: UIViewController {
             }
         }catch let error as NSError{
             print("Erro al mostrar",error.localizedDescription)
-            
         }
     }
 
