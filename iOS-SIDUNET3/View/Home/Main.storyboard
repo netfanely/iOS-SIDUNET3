@@ -259,6 +259,9 @@
                                 <state key="normal" title="        SALVAR" image="icoadicionar">
                                     <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="guardar:" destination="3Di-ZW-mJD" eventType="touchUpInside" id="wiI-Sw-hSH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEl-O3-hNm">
                                 <rect key="frame" x="25" y="453" width="313" height="36"/>
@@ -268,6 +271,9 @@
                                 <state key="normal" title="    MOSTRAR" image="icomostrar">
                                     <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="mostrar:" destination="3Di-ZW-mJD" eventType="touchUpInside" id="aGf-R6-ae4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWW-6H-4P6">
                                 <rect key="frame" x="25" y="497" width="314" height="36"/>
@@ -277,6 +283,9 @@
                                 <state key="normal" title="       EXCLUIR" image="icoapagar">
                                     <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="borrar:" destination="3Di-ZW-mJD" eventType="touchUpInside" id="obZ-cd-iH0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LL2-Su-bV7">
                                 <rect key="frame" x="24" y="542" width="314" height="30"/>
@@ -295,6 +304,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="bgx-o2-r8f"/>
                     </view>
+                    <connections>
+                        <outlet property="barrioText" destination="0ub-WI-P8m" id="piW-Kb-JHy"/>
+                        <outlet property="codText" destination="OaU-VY-YDQ" id="ZyP-O3-6nb"/>
+                        <outlet property="emailText" destination="x6b-Tp-Axo" id="2le-2v-weF"/>
+                        <outlet property="enderecoText" destination="mvm-Rb-Qy5" id="9XK-uH-TeB"/>
+                        <outlet property="mphoneText" destination="JoQ-N5-5G5" id="ONf-lY-RIA"/>
+                        <outlet property="nomeText" destination="6dB-4k-unS" id="8oP-31-E4y"/>
+                        <outlet property="obsText" destination="JiA-2B-koZ" id="X6l-dA-HPU"/>
+                        <outlet property="telefText" destination="Vcp-gT-LGx" id="eo8-5g-wfx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cx2-8C-2zb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
