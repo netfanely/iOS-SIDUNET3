@@ -51,7 +51,7 @@ class ProdutoViewController: UIViewController {
         do {
             try contexto.save()
             print("salvo")
-            descricaoText.text = ""
+            descriText.text = ""
             codProdText2.text = ""
             quantText.text = ""
             costoText.text = ""
@@ -67,9 +67,42 @@ class ProdutoViewController: UIViewController {
         }
     }
     
+    @IBAction func mostrar(_ sender: UIButton) {
+        let contexto = conexion()
+        let fetchRequest : NSFetchRequest<Productos> = Productos.fetchRequest()
+        do {
+            let resultados = try contexto.fetch(fetchRequest)
+            print("Numero de registros: \(resultados.count)")
+            for res in resultados as [NSManagedObject] {
+                let codigo = res.value(forKey: "codProd")
+                let descripcion = res.value(forKey: "descricao")
+                let color = res.value(forKey: "color")
+                let marca = res.value(forKey: "marca")
+                let tamano = res.value(forKey: "tamanho")
+                let precioC = res.value(forKey: "precCosto")
+                let precioV = res.value(forKey: "precVenda")
+                let cantidad = res.value(forKey: "quantidade")
+                print("codigo: \(codigo!) descripcion: \(descripcion!) color: \(color!) marca: \(marca!) tamano: \(tamano!) costo: \(precioC!) venta: \(precioV!) stock: \(cantidad!)")
+            }
+        } catch let error as NSError{
+            print("Erro ao mostrar", error.localizedDescription)
+        }
+    }
+    
     @IBAction func regresar(_ sender: UIButton) {
         //self.dismiss(animated: true, completion: nil)
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func borrar(_ sender: UIButton) {
+        let contexto = conexion()
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Productos")
+        let borrar = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        do {
+            try contexto.execute(borrar)
+            print("Registros borrados")
+        } catch let error as NSError {
+            print("Error al borrar", error.localizedDescription)
+        }
+    }
 }
