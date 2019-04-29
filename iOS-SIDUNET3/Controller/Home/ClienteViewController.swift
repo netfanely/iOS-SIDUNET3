@@ -52,6 +52,14 @@ class ClienteViewController: UIViewController {
         do {
             try contexto.save()
             print("salvó")
+            codText.text = ""
+            nomeText.text = ""
+            emailText.text = ""
+            enderecoText.text = ""
+            barrioText.text = ""
+            telefText.text = ""
+            mphoneText.text = ""
+            obsText.text = ""
         }catch let error as NSError {
             print("Erro ao salvar", error.localizedDescription)
         }
