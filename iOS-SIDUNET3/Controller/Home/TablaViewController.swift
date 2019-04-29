@@ -29,6 +29,16 @@ class TablaViewController: UIViewController, UITableViewDataSource, UITableViewD
         tabla.dataSource = self
         mostrarDatos()
     }
+    /*
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tabla.reloadData()
+    }*/
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabla.reloadData()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return clientes.count
@@ -56,6 +66,21 @@ class TablaViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         mostrarDatos()
         tabla.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "editar", sender: self)
+    }
+    
+    override func prepare(for segue:UIStoryboardSegue, sender:Any?){
+            if segue.identifier == "editar"{
+                if let id = tabla.indexPathForSelectedRow{
+                    let fila = clientes[id.row]
+                    let destino = segue.destination as! EditarViewController
+                    destino.clientesEditar = fila
+                }
+                
+            }
         
     }
     
@@ -64,13 +89,9 @@ class TablaViewController: UIViewController, UITableViewDataSource, UITableViewD
         let fetchRequest : NSFetchRequest<Clientes> = Clientes.fetchRequest()
         do {
             clientes = try contexto.fetch(fetchRequest)
-        } catch let error as NSError{
+        } catch let error as NSError {
             print("Hubo un error al mostrar datos", error.localizedDescription)
         }
     }
-    
-
-
-
 
 }

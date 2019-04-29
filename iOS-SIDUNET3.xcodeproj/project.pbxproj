@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B30B95F422776C46001FABF6 /* Tabla2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30B95F322776C46001FABF6 /* Tabla2TableViewController.swift */; };
+		B30B95F62277796B001FABF6 /* EditarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30B95F52277796B001FABF6 /* EditarViewController.swift */; };
 		B313AAE6227367E700ABD7F4 /* TablaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B313AAE5227367E700ABD7F4 /* TablaViewController.swift */; };
 		B31F8B6B226D1C31008C1226 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F8B6A226D1C31008C1226 /* AppDelegate.swift */; };
 		B31F8B73226D1C31008C1226 /* iOS_SIDUNET3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B31F8B71226D1C31008C1226 /* iOS_SIDUNET3.xcdatamodeld */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		B30B95F322776C46001FABF6 /* Tabla2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabla2TableViewController.swift; sourceTree = "<group>"; };
+		B30B95F52277796B001FABF6 /* EditarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarViewController.swift; sourceTree = "<group>"; };
 		B313AAE5227367E700ABD7F4 /* TablaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablaViewController.swift; sourceTree = "<group>"; };
 		B31F8B67226D1C31008C1226 /* iOS-SIDUNET3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-SIDUNET3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31F8B6A226D1C31008C1226 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				B3AB006F226EBEFD00C0A4CC /* VendaViewController.swift */,
 				B3AB0075226EBF3B00C0A4CC /* ReportesViewController.swift */,
 				B30B95F322776C46001FABF6 /* Tabla2TableViewController.swift */,
+				B30B95F52277796B001FABF6 /* EditarViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				B31F8B73226D1C31008C1226 /* iOS_SIDUNET3.xcdatamodeld in Sources */,
 				B35EB80A226E562400678F4D /* PrincipalViewController.swift in Sources */,
 				B30B95F422776C46001FABF6 /* Tabla2TableViewController.swift in Sources */,
+				B30B95F62277796B001FABF6 /* EditarViewController.swift in Sources */,
 				B3AB0070226EBEFD00C0A4CC /* VendaViewController.swift in Sources */,
 				B35EB808226E554D00678F4D /* MainViewController.swift in Sources */,
 			);
