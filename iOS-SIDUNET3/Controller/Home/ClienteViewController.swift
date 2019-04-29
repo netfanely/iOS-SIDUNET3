@@ -1,6 +1,6 @@
 //
 //  ClienteViewController.swift
-//  iOS-SIDUNET3
+//  iOS-SIDUNET3 com Persistencia de Dados - COREDATA
 //
 //  Created by Fanely on 4/22/19.
 //  Copyright © 2019 Net Fanely. All rights reserved.
@@ -19,6 +19,7 @@ class ClienteViewController: UIViewController {
     @IBOutlet weak var mphoneText: UITextField!
     @IBOutlet weak var obsText: UITextField!
     
+    // MARK - Conexión con la base de datos (COREDATA)
     func conexion()->NSManagedObjectContext{
         let delegate = UIApplication.shared.delegate as! AppDelegate
         return delegate.persistentContainer.viewContext
@@ -27,26 +28,27 @@ class ClienteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func guardar(_ sender: UIButton) {
+        //CARGAR LA BASE DE DATOS
         let contexto = conexion()
-        let entidadCliente = NSEntityDescription.insertNewObject(forEntityName: "Clientes", into: contexto) as! Clientes
-        
+        //ENTIDAD CLIENTE o CLASE
+        let entidadClientes = NSEntityDescription.insertNewObject(forEntityName: "Clientes", into: contexto) as! Clientes
+        //Para tipo Enteros
         guard let codigo = Int16(codText.text!) else { return }
         guard let telefono1 = Int32(telefText.text!) else { return }
         guard let telefono2 = Int32(mphoneText.text!) else { return }
         
-        entidadCliente.nomeCli=nomeText.text
-        entidadCliente.email=emailText.text
-        entidadCliente.endereco=enderecoText.text
-        entidadCliente.barrio=barrioText.text
-        entidadCliente.obs=obsText.text
-        entidadCliente.codCli = codigo
-        entidadCliente.telefone = telefono1
-        entidadCliente.mobilePhone = telefono2
-        
+        entidadClientes.nomeCli=nomeText.text
+        entidadClientes.email=emailText.text
+        entidadClientes.endereco=enderecoText.text
+        entidadClientes.barrio=barrioText.text
+        entidadClientes.obs=obsText.text
+        entidadClientes.codCli = codigo
+        entidadClientes.telefone = telefono1
+        entidadClientes.mobilePhone = telefono2
+        //DO-CATCH Para ver errores
         do {
             try contexto.save()
             print("salvó")
@@ -54,7 +56,7 @@ class ClienteViewController: UIViewController {
             print("Erro ao salvar", error.localizedDescription)
         }
     }
-    
+
     @IBAction func mostrar(_ sender: UIButton) {
         let contexto = conexion()
         let fetchRequest : NSFetchRequest<Clientes> = Clientes.fetchRequest()
@@ -68,7 +70,7 @@ class ClienteViewController: UIViewController {
                 let barrio = res.value(forKey: "barrio")
                 let obs = res.value(forKey: "obs")
                 let codigo = res.value(forKey: "codCli")
-                let telefono1 = res.value(forKey: "telefone ")
+                let telefono1 = res.value(forKey: "telefone")
                 let telefono2 = res.value(forKey: "mobilePhone")
                 
                 print("Nombre: \(nome!) E-mail: \(email!) Direccion: \(endereco!) Bairro: \(barrio!) Observacao: \(obs!) Codigo: \(codigo!) Celular: \(telefono1!) Celular2: \(telefono2!)")
@@ -82,14 +84,14 @@ class ClienteViewController: UIViewController {
         //self.dismiss(animated: true, completion: nil)
         navigationController?.popViewController(animated: true)
     }
-    
+
     @IBAction func borrar(_ sender: UIButton){
         let contexto = conexion()
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Alumnos")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Clientes")
         let borrar = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         do {
             try contexto.execute(borrar)
-            print("Registros borrados")
+            print("Todos los registros borrados")
         } catch let error as NSError {
             print("Error al borrar", error.localizedDescription)
         }

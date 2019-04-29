@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: - Core Data Stack
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "PersistenciaCoreData")
+        let container = NSPersistentContainer(name: "iOS_SIDUNET3") //PersistenciaCoreData
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
         if let error = error as NSError? {
             fatalError("Unresolved error \(error), \(error.userInfo)")
