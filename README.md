@@ -1,9 +1,13 @@
 # iOS-SIDUNET3
-
+Curso: Programacao Mobile com iOS
+Professor: Silvano Malfatti
 Aluna : Fanny Pastor H.
+IDE = Xcode 10.2.1
+Language = Swift 5
+OS = macOS Mojave 10.14.4
 
 # FEITO:
-- DataBase : Persistencia com Core Data
+- DataBase : Persistencia de dados com Core Data
 - Entidades: Usuarios, Clientes, Produtos, Venda
 - CRUD: Create/Read/Update/Delete
 - CONTEXTO: NSManagedObjectContext
