@@ -17,6 +17,7 @@ OS = macOS Mojave 10.14.4
 
 # NO FEITO:
 - DropDown
+- Login
 - Relaciones entre tabelas Venda com Clientes 1:1 e Venda com Produtos 1:muito
 - Reportes
 - Manejo de estoque
