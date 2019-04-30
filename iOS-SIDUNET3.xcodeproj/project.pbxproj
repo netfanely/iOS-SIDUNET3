@@ -11,6 +11,7 @@
 		B30B95F62277796B001FABF6 /* EditarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30B95F52277796B001FABF6 /* EditarViewController.swift */; };
 		B30B95F82277B8EB001FABF6 /* TablaProdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30B95F72277B8EB001FABF6 /* TablaProdViewController.swift */; };
 		B30B95FA2277BAD2001FABF6 /* Tabla2ProdTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30B95F92277BAD2001FABF6 /* Tabla2ProdTableViewController.swift */; };
+		B30B95FC2277C0E5001FABF6 /* EditarProdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30B95FB2277C0E5001FABF6 /* EditarProdViewController.swift */; };
 		B313AAE6227367E700ABD7F4 /* TablaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B313AAE5227367E700ABD7F4 /* TablaViewController.swift */; };
 		B31F8B6B226D1C31008C1226 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31F8B6A226D1C31008C1226 /* AppDelegate.swift */; };
 		B31F8B73226D1C31008C1226 /* iOS_SIDUNET3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B31F8B71226D1C31008C1226 /* iOS_SIDUNET3.xcdatamodeld */; };
@@ -30,6 +31,7 @@
 		B30B95F52277796B001FABF6 /* EditarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarViewController.swift; sourceTree = "<group>"; };
 		B30B95F72277B8EB001FABF6 /* TablaProdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablaProdViewController.swift; sourceTree = "<group>"; };
 		B30B95F92277BAD2001FABF6 /* Tabla2ProdTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabla2ProdTableViewController.swift; sourceTree = "<group>"; };
+		B30B95FB2277C0E5001FABF6 /* EditarProdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarProdViewController.swift; sourceTree = "<group>"; };
 		B313AAE5227367E700ABD7F4 /* TablaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablaViewController.swift; sourceTree = "<group>"; };
 		B31F8B67226D1C31008C1226 /* iOS-SIDUNET3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-SIDUNET3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31F8B6A226D1C31008C1226 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				B30B95F52277796B001FABF6 /* EditarViewController.swift */,
 				B30B95F72277B8EB001FABF6 /* TablaProdViewController.swift */,
 				B30B95F92277BAD2001FABF6 /* Tabla2ProdTableViewController.swift */,
+				B30B95FB2277C0E5001FABF6 /* EditarProdViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				B313AAE6227367E700ABD7F4 /* TablaViewController.swift in Sources */,
 				B3AB0076226EBF3B00C0A4CC /* ReportesViewController.swift in Sources */,
 				B3AB0072226EBF1400C0A4CC /* ClienteViewController.swift in Sources */,
+				B30B95FC2277C0E5001FABF6 /* EditarProdViewController.swift in Sources */,
 				B31F8B73226D1C31008C1226 /* iOS_SIDUNET3.xcdatamodeld in Sources */,
 				B35EB80A226E562400678F4D /* PrincipalViewController.swift in Sources */,
 				B30B95F422776C46001FABF6 /* Tabla2TableViewController.swift in Sources */,

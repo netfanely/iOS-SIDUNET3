@@ -27,6 +27,11 @@ class TablaProdTableViewController: UITableViewController{
         mostrarDatos()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tabla.reloadData()
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return produtos.count
         
@@ -39,6 +44,34 @@ class TablaProdTableViewController: UITableViewController{
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let contexto = conexion()
+        let produto = produtos[indexPath.row]
+        if editingStyle == .delete {
+            contexto.delete(produto)
+            do{
+                try contexto.save()
+            }catch let error as NSError {
+                print("Hubo un error al eliminar datos", error.localizedDescription)
+            }
+        }
+        mostrarDatos()
+        tabla.reloadData()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "editar", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editar" {
+            if let id = tabla.indexPathForSelectedRow{
+                let fila = produtos[id.row]
+                let destino = segue.destination as! EditarProdViewController
+                destino.produtosEditar = fila
+            }
+        }
+    }
+    
     func mostrarDatos(){
         let contexto = conexion()
         let fetchRequest : NSFetchRequest<Productos> = Productos.fetchRequest()
