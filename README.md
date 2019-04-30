@@ -2,21 +2,22 @@
 
 Aluna : Fanny Pastor H.
 
-* FEITO:
+# FEITO:
 - DataBase : Persistencia com Core Data
 - Entidades: Usuarios, Clientes, Produtos, Venda
 - CRUD: Create/Read/Update/Delete
 - CONTEXTO: NSManagedObjectContext
 
-* Em Andamento
+# Em Andamento
 - Venda
 
-* NO FEITO:
+# NO FEITO:
 - DropDown
 - Relaciones entre tabelas Venda com Clientes 1:1 e Venda com Produtos 1:muito
 - Reportes
 - Manejo de estoque
 
-* MELHORAS FUTURAS
+# MELHORAS FUTURAS
 - UX Melhorar diseño de imagens
 - DropDown a uma entidade
+- Documentaçao e Diagramas
